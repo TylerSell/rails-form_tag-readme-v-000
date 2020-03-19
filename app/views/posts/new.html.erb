@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h3>Post Form</h3>
 
 <%= form_tag posts_path do %>
@@ -8,4 +9,15 @@
   <%= text_area_tag :'post[description]' %><br>
  
   <%= submit_tag "Submit Post" %>
+=======
+<%= form_tag posts_path do %>
+  <label>Post title:</label><br>
+  <input type="text" id="post_title" name="post[title]"><br>
+ 
+  <label>Post description:</label><br>
+  <textarea id="post_description" name="post[description]"></textarea><br>
+ 
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="submit" value="Submit Post">
+>>>>>>> 137221c3400a6c0bc4e640a2b1950fc04a4de99d
 <% end %>
